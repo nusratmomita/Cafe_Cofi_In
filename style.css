@@ -168,3 +168,101 @@ header{
     width: 500px;
     height: 500px;
 }
+
+/* about us style */
+.about_us{
+    padding: 120px 190px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-pink);
+}
+
+.bannerImage{
+    width: 600px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10%;
+    /* box-shadow: 8px 8px 50px #28161a; */
+    transition: transform 0.25s ease, 0.25s ease;
+}
+
+.bannerImage:hover{
+    transform: translateY(-10px);
+    box-shadow: 8px 8px 50px #28161a;
+    cursor: pointer;
+}
+
+.about_us_text h2, .our_menu_tag{
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about_us_text h2::after, .our_menu_tag::after{
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 20px;
+    border-radius: 5px;
+    background: var(--secondary-yellow);
+}
+
+.about_us_text p{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark);    
+    margin-bottom: 20px;
+    line-height: 35px;
+}
+
+.sm_tags{
+    text-align: center;
+}
+
+.sms{
+    color: var(--primary-brown);
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.sms_link{
+    transition: transform 0.25s ease, text-decoration 0.25s ease;
+}
+
+.sms_link:hover{
+    transform: translateY(-8px);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    color: var(--secondary-yellow);
+}
+
+/* our_menu style */
+.our_menu{
+    padding-top: 30px;
+    background-color: var(--dark);
+    color: var(--light-pink);
+}
+/* Responsive */
+@media screen and (max-width: 756px) {
+    .menu{
+        display: none;
+    }
+
+    .banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+        background-color: var(--primary-brown);
+    }
+
+    .banner_image{
+        width: 350px;
+        height: 350px;
+    }
+}
