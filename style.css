@@ -433,6 +433,8 @@ header{
 .gallery_images{
     display: grid;
     gap: 15px;
+    justify-content: center;
+        align-items: center;
     grid-template-columns: repeat(3,1fr);
 }
 
