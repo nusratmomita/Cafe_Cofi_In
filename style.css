@@ -201,14 +201,14 @@ header{
     cursor: pointer;
 }
 
-.about_us_text h2, .our_menu_tag, .testimonials{
+.about_us_text h2, .our_menu_tag, .testimonials, .gallery_tag{
     font-size: 35px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
 }
 
-.about_us_text h2::after, .our_menu_tag::after, .testimonials::after{
+.about_us_text h2::after, .our_menu_tag::after, .testimonials::after, .gallery_tag::after{
     content: "";
     width: 80px;
     height: 5px;
@@ -412,6 +412,7 @@ header{
 .swiper-button-prev:hover, .swiper-button-next:hover{
     color: var(--dark);
 }
+
 .swiper-pagination-bullet{
     width: 15px;
     height: 15px;
@@ -419,8 +420,34 @@ header{
 }
 
 
+/* Gallery style */
+.gallery_section{
+    max-width: var(--max-width);
+    margin: auto;
+}
 
+.gallery_tag{
+    margin-top: 20px;
+}
 
+.gallery_images{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.gallery_images img{
+    width: 450px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: zoom-in;
+    transition: 0.3s ease;
+}
+
+.gallery_images img:hover{
+    transform: scale(1.05);
+}
 
 
 
@@ -564,6 +591,7 @@ header{
         height: 80px;
     }
 
+    /* banner */
     .banner{
         display: flex;
         flex-direction: column;
@@ -584,6 +612,7 @@ header{
         height: 400px;
     }
 
+    /* about us */
     .about_us{
         padding: 120px 45px;
         display: flex;
@@ -593,7 +622,7 @@ header{
         align-items: center;
     }
 
-    .about_us_text h2, .testimonials, .our_menu_tag{
+    .about_us_text h2, .testimonials, .our_menu_tag, .gallery_tag{
         font-size: 30px;
         font-weight: 600;
     }
@@ -611,6 +640,7 @@ header{
         transition: transform 0.25s ease, 0.25s ease;
     }
 
+    /*  menu */
     .menu_images{
         padding-bottom: 70px;
         display: grid;
@@ -622,10 +652,8 @@ header{
     }
 
     .price{
-        /* white-space: nowrap; */
         position: absolute;
         top: 0;
-        /* right: 100; */
         left: 130px;
         background-color: var(--secondary-yellow);
         color: var(--dark);
@@ -637,5 +665,20 @@ header{
 
     .menu_images p{
         white-space: nowrap;
+    }
+
+    /*  gallery */
+    .gallery_images{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .galley_images img{
+        width: 95%;
+        height: 200px;
+        border-radius: 5px;
+        
     }
 }
