@@ -201,14 +201,14 @@ header{
     cursor: pointer;
 }
 
-.about_us_text h2, .our_menu_tag, .testimonials, .gallery_tag{
+.about_us_text h2, .our_menu_tag, .testimonials, .gallery_tag ,.contact_us{
     font-size: 35px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
 }
 
-.about_us_text h2::after, .our_menu_tag::after, .testimonials::after, .gallery_tag::after{
+.about_us_text h2::after, .our_menu_tag::after, .testimonials::after, .gallery_tag::after,.contact_us::after{
     content: "";
     width: 80px;
     height: 5px;
@@ -465,8 +465,31 @@ header{
     align-items: center;
 }
 
+  
+/* contact us style */
+.contact_us_section{
+    margin-top: 20px;
+}
 
+.info_form{
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    /* gap: 3px; */
+    justify-content: center;
+    /* align-items: center; */
+}
 
+.form_contact{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.name{
+    height: 100%;
+    width: full;
+}
 
 
 
@@ -638,7 +661,7 @@ header{
         align-items: center;
     }
 
-    .about_us_text h2, .testimonials, .our_menu_tag, .gallery_tag{
+    .about_us_text h2, .testimonials, .our_menu_tag, .gallery_tag {
         font-size: 30px;
         font-weight: 600;
     }
