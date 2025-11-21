@@ -70,7 +70,7 @@
         <!-- our menu section -->
         <div class="our_menu">
             <div class="menu_section">
-                <h2 class="poppins our_menu_tag">About Us</h2>
+                <h2 class="poppins our_menu_tag">Our Menu</h2>
                 <div class="menu_images poppins">
                     <div>
                         <div class="image_div">
@@ -127,47 +127,51 @@
         </div>
 
         <!-- testimonials section -->
-        <div class="testimonials_section">
-            <h2 class="poppins testimonials">Testimonials</h2>
-            <div class="slider_container swiper">
-                <div class="slider_wrapper">
-                    <ul class="testimonial_list swiper-wrapper">
-                        <li class="testimonial swiper-slide">
-                            <img src="./assets/user-1.jpg" alt="user">
-                            <h3 class="poppins">James Stone</h3>
-                            <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa .</p>
-                        </li>
-                        <li class="testimonial swiper-slide">
-                            <img src="./assets/user-2.jpg" alt="user">
-                            <h3 class="poppins">James Stone</h3>
-                            <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa .</p>
-                        </li>
-                        <li class="testimonial swiper-slide">
-                            <img src="./assets/user-3.jpg" alt="user">
-                            <h3 class="poppins">James Stone</h3>
-                            <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa .</p>
-                        </li>
-                        <li class="testimonial swiper-slide">
-                            <img src="./assets/user-4.jpg" alt="user">
-                            <h3 class="poppins">James Stone</h3>
-                            <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa .</p>
-                        </li>
-                        <li class="testimonial swiper-slide">
-                            <img src="./assets/user-5.jpg" alt="user">
-                            <h3 class="poppins">James Stone</h3>
-                            <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa .</p>
-                        </li>
-                    </ul>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+       <div class="testimonials_section">
+        <h2 class="poppins testimonials">Testimonials</h2>
 
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+        <div class="slider_container swiper">
+            <div class="swiper-wrapper">
+
+                <div class="testimonial swiper-slide">
+                    <img src="./assets/user-3.jpg" alt="user">
+                    <h3 class="poppins">Swift Tomer</h3>
+                    <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa.</p>
                 </div>
+
+                <div class="testimonial swiper-slide">
+                    <img src="./assets/user-2.jpg" alt="user">
+                    <h3 class="poppins">James Stone</h3>
+                    <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa.</p>
+                </div>
+
+                <div class="testimonial swiper-slide">
+                    <img src="./assets/user-3.jpg" alt="user">
+                    <h3 class="poppins">Jake Stones</h3>
+                    <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa.</p>
+                </div>
+
+                <div class="testimonial swiper-slide">
+                    <img src="./assets/user-2.jpg" alt="user">
+                    <h3 class="poppins">Livey chey</h3>
+                    <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa.</p>
+                </div>
+
+                <div class="testimonial swiper-slide">
+                    <img src="./assets/user-5.jpg" alt="user">
+                    <h3 class="poppins">Kin Amir</h3>
+                    <p class="poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi culpa.</p>
+                </div>
+
             </div>
-        
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
+       </div>
+
     </main>
 
 
@@ -175,14 +179,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <script>
-        const swiper = new Swiper('.slider_wrapper', {
-            // Optional parameters
-            // direction: 'vertical',
+        const swiper = new Swiper('.swiper', {
             loop: true,
-
+            spaceBetween: 25,
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
             },
 
             // Navigation arrows
@@ -191,10 +195,17 @@
                 prevEl: '.swiper-button-prev',
             },
 
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
+           breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                },
+           }
         });
     </script>
 </body>
