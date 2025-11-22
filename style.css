@@ -487,6 +487,7 @@ header{
     flex-direction: column;
     gap: 15px;
 }
+
 .contact_us_left{
     display: flex;
     flex-direction: column;
@@ -556,11 +557,22 @@ footer h2{
     margin-left: 10px;
 }
 
+.circle{
+    margin-top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--white);
+}
 .policies{
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
+.policies h2:hover{
+    color: var(--secondary-yellow);
+    cursor: pointer;
+}
 .sms_link_footer{
    margin-left: 20px;
    font-size: 20px;
@@ -782,6 +794,7 @@ footer h2{
 
     /*  gallery */
     .gallery_images{
+        padding: 0 120px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -810,5 +823,36 @@ footer h2{
         height: 200px;
         border-radius: 5px;
         
+    }
+
+    /* contact us */
+    .info_form{
+        padding: 0 45px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .contact_us_right,.contact_us_left{
+        width: 100%;
+    }
+
+    .contact_us_section{
+        margin-top: 20px;
+        padding: 50px 0;
+        background-color: var(--light-pink);
+    }
+
+    .submit_btn{
+        width: 100%;
+    }
+
+    /* footer */
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }
