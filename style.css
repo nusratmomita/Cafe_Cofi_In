@@ -469,28 +469,72 @@ header{
 /* contact us style */
 .contact_us_section{
     margin-top: 20px;
+    padding: 50px 0 100px;
+    background-color: var(--light-pink);
 }
 
 .info_form{
-    max-width: var(--max-width);
-    margin: auto;
+    padding: 0 90px;
     display: flex;
-    /* gap: 3px; */
+    gap: 48px;
     justify-content: center;
-    /* align-items: center; */
+    align-items: start;
 }
 
 .form_contact{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact_us_left{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.name{
-    height: 100%;
-    width: full;
+.contact_us_left h3{
+   font-size: 20px;
+   font-weight: 400;
+   color: var(--dark);
 }
 
+.contact_us_left i{
+    margin-right: 12px;
+}
+
+.contact_us_right,.contact_us_left{
+    width: 50%;
+}
+.name,.email,.message{
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid var(--medium-gray);
+    font-size: 20px;
+}
+
+.message{
+    height: 150px;
+}
+
+.submit_btn{
+    width: 25%;
+    padding: 10px 10px;
+    background-color: var(--secondary-yellow);
+    border: 2px solid var(--primary-brown);
+    border-radius: 5px;
+    color: var(--primary-brown);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.submit_btn:hover{
+    background-color: transparent;
+    color: var(--secondary-yellow);
+    border: 2px solid var(--secondary-yellow);
+}
 
 
 
