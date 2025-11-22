@@ -31,7 +31,6 @@
     --max-width: 1300px
 }
 
-
 ul{
     list-style: none;
     display: flex;
@@ -43,6 +42,7 @@ a{
     color: white;
 }
 
+/* header section style */
 header{
     display: flex;
     justify-content: space-between;
@@ -87,7 +87,9 @@ header{
     border-radius: 10px;
 }
 
-
+.cross , .hamburger{
+    display: none;
+}
 
 /* banner section style */
 .banner{
@@ -707,8 +709,70 @@ footer h2{
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-    .menu, .site_name{
+
+    /* herader */
+    .menu{
         display: none;
+    }
+
+    .hamburger{
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 30px; 
+        margin-right: 10px;
+    }
+
+    .cross{
+        position: absolute;
+        top: 45px;
+        right: 30px;
+        border: none;
+        background-color: transparent;
+        color: black;
+        font-size: 30px;
+    }
+
+    .menu{
+        display: block;
+        background-color: var(--white);
+        position: fixed;
+        left: -300px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        width: 200px;
+        height: 100%;
+        transition: left 0.2s ease;
+        z-index: 9999;
+    } 
+
+    body.show_mobile_menu .menu{
+        left: 0;
+    }
+
+    body.show_mobile_menu header::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(3px);
+        background: rgba(0,0,0,0.2);
+    }
+
+    .menu li a{
+        color: var(--dark);
+        display: block;
+        margin-top: 17px;
+        font-size: 20px;
+    }
+
+    .cross , .hamburger{
+        display: block;
     }
 
     .siteIcon{

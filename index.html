@@ -14,17 +14,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- header section  -->
     <header>
         <div>
             <a href="#" class="site_logo">
-                <img class="siteIcon" src="./assets/siteIcon.png" alt="siteIcon">
-                <h1 class="site_name miniver">Cofi-In</h1>
+                <img class="siteIcon " src="./assets/siteIcon.png" alt="siteIcon">
+                <h1 class="site_name overflow miniver">Cofi-In</h1>
             </a>
         </div>
+        
         <div>
             <ul class="menu poppins">
+                <button id="cross" class="cross"><i class="fa-solid fa-x"></i></button>
+
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Menu</a></li>
@@ -33,6 +35,8 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
+
+        <button id="hamburger" class="hamburger"><i class="fa-solid fa-bars"></i></button>
     </header>   
 
     <main>
@@ -238,7 +242,6 @@
     </footer>
 
 
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <script>
@@ -272,4 +275,13 @@
         });
     </script>
 </body>
+<script>
+    const hamburgerIcon = document.querySelector("#hamburger");
+    const crossIcon = document.querySelector("#cross");
+
+    hamburgerIcon.addEventListener("click", () => {
+        document.body.classList.toggle("show_mobile_menu");
+    })
+    crossIcon.addEventListener("click", () => hamburgerIcon.click())
+</script>
 </html>
